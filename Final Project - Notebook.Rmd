@@ -1,22 +1,39 @@
 ---
-title: "Hannah and The Dinosaurs - Final Project"
-output:
-  html_document:
-    df_print: paged
----nnjj
+title: "Final Data Science Project: Clustered Parcels"
+author: "Ke Xu Zhou, Anna Swierta, Vincent Tordo, Egdar Palencia, Zarif Normatov, Hannah Ximen"
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+---
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
+
+# 1. Business Problem
+
+Paack (<https://paack.co/>), a last-mile delivery service provider in Europe, is currently creating the delivery journeys for their drivers by manually grouping the daily orders they receive. It is a time-consuming process, difficult to scale, and prone to errors and inefficiencies.
+
+
+# 2. Business Solution Process
+
+The time spent on manually allocating a set of locations to drivers everyday could be saved by automatically clustering locations that should be visited by the same driver. We have chosen to run several clustering methods such as k-means to group delivery locations based on their geographical distance.
+
+# 3. Data Sample
 
 ```{r}
-plot(cars)
+print("helloworld")
+
+
+
+ProjectDataSample <- read.csv("Paack_data_extract.csv", na.strings=c(""," ","NA"), header=TRUE, stringsAsFactors = TRUE)
+ProjectDataSample <- data.matrix(ProjectDataSample) 
+summary(ProjectDataSample) 
+str(ProjectDataSample) 
+head(ProjectDataSample)
+
+
+
+
 ```
 
-Business Problem:
+# 4. Data Dictionary
 
-Paack (<https://paack.co/>), a last-mile delivery service provider in Europe, is currently creating the delivery journeys for their drivers by manually grouping the daily orders they receive.
-
-llllBusiness Solution Process:
-
-Data Dictionary:
+```{r}
+print("helloworld")
+```
